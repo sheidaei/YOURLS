@@ -1,7 +1,8 @@
+SetEnv PATH http://is.powerfulq.com
 # BEGIN YOURLS
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /
+RewriteBase PATH/
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^.*$ /yourls-loader.php [L]
