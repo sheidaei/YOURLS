@@ -279,6 +279,7 @@ yourls_html_menu() ;
 yourls_do_action( 'admin_page_before_content' );
 
 if ( !$is_bookmark ) { ?>
+	<p>we are testing <?php echo getenv('USERNAME') ?></p>
 	<p><?php echo $search_sentence; ?></p>
 	<p><?php
 		printf( yourls__( 'Display <strong>%1$s</strong> to <strong class="increment">%2$s</strong> of <strong class="increment">%3$s</strong> URLs' ), $display_on_page, $max_on_page, $total_items );
