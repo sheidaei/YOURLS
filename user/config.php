@@ -6,6 +6,8 @@
  * Notepad on Windows. Make sure there is no character before the opening <?php at the beginning of this file.
  */
 
+define( 'YOURLS_NO_HASH_PASSWORD', true );
+
 $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
 $server = $url["host"];
@@ -67,7 +69,6 @@ define( 'YOURLS_COOKIEKEY', 'modify this text with something random' );
  ** YOURLS will auto encrypt plain text passwords in this file
  ** Read http://yourls.org/userpassword for more information */
 $yourls_user_passwords = array(
-	'shahin' => 'md5:18537:a45927812c079d3d5fef38ba483a3dc0',
 	getenv('USERNAME') => getenv('PASSWORD'),
 	// 'username2' => 'password2',
 	// You can have one or more 'login'=>'password' lines
